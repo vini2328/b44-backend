@@ -3,7 +3,9 @@ const cors= require("cors")
 const app = express()
 const axios=require('axios')
 const cheerio = require('cheerio')
-const port=7000
+const dotenv = require('dotenv').config()
+
+const port=process.env.PORT || 7000
 
 app.use(cors())
 app.use(express.json())
@@ -62,7 +64,6 @@ app.post('/searchitem',async (req,res)=>{
         const $$$=cheerio.load(snapData)
         const snapImg=$$$(".product-image")
         const snaptitle=$$$(".product-title")
-        // const mrp = $$$(".product-price").eq(0).text().trim();
         for(let k=0;k<10;k++){
             let s1=snapImg[k].attribs.srcset
             let s2=snaptitle[k].attribs.title
