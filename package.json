@@ -2,7 +2,7 @@
   "name": "b44-backened",
   "version": "1.0.0",
   "description": "",
-  "main": "scrape.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon scrape.js",
     "start": "node scrape",
