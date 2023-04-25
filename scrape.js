@@ -84,5 +84,5 @@ app.post('/searchitem',async (req,res)=>{
 })
 
 app.listen(port,() =>{
-    console.log("app started",port)
+    console.log("app has started",port)
 })
